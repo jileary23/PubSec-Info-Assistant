@@ -494,6 +494,7 @@ module "openaiServices" {
   source                          = "./core/ai/openaiservices"
   name                            = var.openAIServiceName != "" ? var.openAIServiceName : "infoasst-aoai-${random_string.random.result}"
   location                        = var.location
+  cognitive_location              = var.cognitive_location
   tags                            = local.tags
   resourceGroupName               = azurerm_resource_group.rg.name
   useExistingAOAIService          = var.useExistingAOAIService
@@ -540,6 +541,7 @@ module "aiDocIntelligence" {
   source                        = "./core/ai/docintelligence"
   name                          = "infoasst-docint-${random_string.random.result}"
   location                      = var.location
+  cognitive_location            = var.cognitive_location
   tags                          = local.tags
   customSubDomainName           = "infoasst-docint-${random_string.random.result}"
   resourceGroupName             = azurerm_resource_group.rg.name
@@ -555,6 +557,7 @@ module "cognitiveServices" {
   source                        = "./core/ai/cogServices"
   name                          = "infoasst-aisvc-${random_string.random.result}"
   location                      = var.location 
+  cognitive_location            = var.cognitive_location
   tags                          = local.tags
   resourceGroupName             = azurerm_resource_group.rg.name
   is_secure_mode                = var.is_secure_mode

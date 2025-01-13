@@ -645,3 +645,8 @@ variable "password_lifetime" {
   default = 365
   description = "The number of days used as the lifetime for passwords"  
 }
+
+variable "cognitive_location" {
+  type = string
+  description = "Location to deploy Azure AI Services"
+}

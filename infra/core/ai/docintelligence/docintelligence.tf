@@ -1,6 +1,6 @@
 resource "azurerm_cognitive_account" "docIntelligenceAccount" {
   name                          = var.name
-  location                      = var.location
+  location                      = var.cognitive_location
   resource_group_name           = var.resourceGroupName
   kind                          = "FormRecognizer"
   sku_name                      = var.sku["name"]

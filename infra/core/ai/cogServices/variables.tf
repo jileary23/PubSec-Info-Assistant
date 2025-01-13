@@ -59,3 +59,8 @@ variable "subnet_name" {
 variable "vnet_name" {
   type    = string
 }
+
+variable "cognitive_location" {
+  type = string
+  description = "Location to deploy Azure AI Services"
+}

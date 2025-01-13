@@ -1,7 +1,7 @@
 resource "azurerm_cognitive_account" "openaiAccount" {
   count                               = var.useExistingAOAIService ? 0 : 1
   name                                = var.name
-  location                            = var.location
+  location                            = var.cognitive_location
   resource_group_name                 = var.resourceGroupName
   kind                                = var.kind
   sku_name                            = var.sku["name"]

@@ -1,6 +1,6 @@
 resource "azurerm_cognitive_account" "cognitiveService" {
   name                          = var.name
-  location                      = var.location
+  location                      = var.cognitive_location
   resource_group_name           = var.resourceGroupName
   kind                          = "CognitiveServices"
   sku_name                      = var.sku["name"]

@@ -59,3 +59,8 @@ variable "subnet_name" {
 variable "arm_template_schema_mgmt_api" {
   type = string
 }
+
+variable "cognitive_location" {
+  type = string
+  description = "Location to deploy Azure AI Services"
+}
